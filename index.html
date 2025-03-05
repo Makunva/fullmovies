@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Sitio de Películas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Mis Películas</h1>
+    <div id="movies"></div>
+
+    <script>
+        const movies = [
+            { title: 'Película 1', url: 'https://pixeldrain.com/your-movie-url-1' },
+            { title: 'Película 2', url: 'https://pixeldrain.com/your-movie-url-2' }
+        ];
+
+        const movieContainer = document.getElementById('movies');
+        movies.forEach(movie => {
+            const movieDiv = document.createElement('div');
+            movieDiv.className = 'movie';
+            movieDiv.innerHTML = `<h2>${movie.title}</h2><a href="${movie.url}" target="_blank">Ver ahora</a>`;
+            movieContainer.appendChild(movieDiv);
+        });
+    </script>
+</body>
+</html>
