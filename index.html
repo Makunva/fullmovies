@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <title>Mi Sitio de Películas</title>
     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    </head>
+    <body>
     <h1>Mis Películas</h1>
     <div id="movies"></div>
-
+    <div id="admin-section" style="display: none;">
+        <input type="file" id="fileInput">
+    </div>
+    <div id="login-section">
+        <h2>Login de Administrador</h2>
+        <input type="password" id="adminPassword" placeholder="Contraseña">
+        <button onclick="login()">Login</button>
+    </div>
+    <script src="scripts.js">
+    </script>
     <script>
         const movies = [
             { title: 'Película 1', url: 'https://pixeldrain.com/your-movie-url-1' },
